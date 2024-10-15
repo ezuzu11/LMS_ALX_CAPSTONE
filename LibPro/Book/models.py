@@ -1,5 +1,4 @@
 from django.db import models
-from django.conf import settings # to reference the custom User model
 
 
 class Book(models.Model):

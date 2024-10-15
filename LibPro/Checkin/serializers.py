@@ -1,6 +1,5 @@
 from rest_framework import serializers
 from .models import Checkin
-from Book.models import Book
 
 class CheckinSerializer(serializers.ModelSerializer):
     class Meta:

@@ -29,11 +29,11 @@ class CheckoutSerializer(serializers.ModelSerializer):
         book.save()
         return super().create(validated_data)
     
+
     def update(self, instance, validated_data):
         book = instance.book
         is_returned = validated_data.get('is_returned', instance.is_returned)
         
-
         # If the book is being returned and wasn't returned before
         if is_returned and not instance.is_returned:
             book.copies_available += 1

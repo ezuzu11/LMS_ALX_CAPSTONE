@@ -135,28 +135,3 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 LOGIN_REDIRECT_URL = '/api/checkout_/borrowing-history/'
 LOGOUT_REDIRECT_URL = '/'
 
-
-'''
-#JWT
-
-# Import timedelta
-from datetime import timedelta
-
-# Simple JWT settings
-SIMPLE_JWT = {
-    'ACCESS_TOKEN_LIFETIME': timedelta(minutes=5),  # Token expires in 5 minutes
-    'REFRESH_TOKEN_LIFETIME': timedelta(days=1),    # Refresh token expires in 1 day
-    'AUTH_HEADER_TYPES': ('Bearer',),              # How the token is sent (in Authorization header)
-}
-
-# REST framework settings for JWT
-REST_FRAMEWORK = {
-    'DEFAULT_AUTHENTICATION_CLASSES': (
-        'rest_framework_simplejwt.authentication.JWTAuthentication',
-    ),
-}
-
-
-CORS_ORIGIN_ALLOW_ALL = True
-CORS_ALLOW_CREDENTIALS = True
-'''

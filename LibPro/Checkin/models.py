@@ -1,6 +1,6 @@
 from django.db import models
 from django.conf import settings
-from Book.models import Book  # Assuming you already have a Book model
+from Book.models import Book  
 
 class Checkin(models.Model):
     user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
